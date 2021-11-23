@@ -1,5 +1,6 @@
 package com.atguigu.crowd.mvc.config;
 
+import com.atguigu.crowd.exception.LoginFailedException;
 import com.atguigu.crowd.util.CrowdUtil;
 import com.atguigu.crowd.util.ResultEntity;
 import com.google.gson.Gson;
@@ -16,6 +17,16 @@ import java.io.IOException;
  */
 @ControllerAdvice
 public class CrowdExceptionResolver {
+
+    @ExceptionHandler(value = LoginFailedException.class)
+    public ModelAndView resolveNullPointerException(
+            LoginFailedException exception,
+            HttpServletRequest request,
+            HttpServletResponse response
+    ) throws IOException {
+        String viewName = "admin-login";
+        return commonExceptionResolver(viewName, exception, request, response);
+    }
 
     @ExceptionHandler(value = ArithmeticException.class)
     public ModelAndView resolveNullPointerException(

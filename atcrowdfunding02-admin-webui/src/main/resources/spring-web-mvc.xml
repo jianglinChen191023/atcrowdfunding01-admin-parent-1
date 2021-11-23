@@ -17,6 +17,7 @@
     <!-- 配置 SpringMVC 的注解驱动 -->
     <mvc:annotation-driven/>
 
+
     <!-- 配置视图解析器 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/"/>
@@ -43,6 +44,7 @@
         </property>
     </bean>
 
-
-
+    <!-- 配置 view-controller, 直接把请求地址和视图名称关联起来 不必写 handler 方法了 -->
+    <mvc:view-controller path="/admin/to/login/page.html" view-name="admin-login"/>
+    <mvc:view-controller path="/admin/to/main/page.html" view-name="admin-main"/>
 </beans>

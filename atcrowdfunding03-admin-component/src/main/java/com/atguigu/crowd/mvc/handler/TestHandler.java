@@ -87,10 +87,10 @@ public class TestHandler {
         modelMap.addAttribute("adminList2", adminList);
         modelMap.addAttribute("adminList4", adminList);
 
-//        System.out.println(10 / 0);
+        System.out.println(10 / 0);
 
-        String a = null;
-        System.out.println(a.length());
+//        String a = null;
+//        System.out.println(a.length());
 
         return "/target";
     }
