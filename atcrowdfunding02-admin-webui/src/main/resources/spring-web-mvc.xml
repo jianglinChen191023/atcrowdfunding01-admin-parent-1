@@ -29,7 +29,7 @@
             return "target";
         }
     -->
-<!--    <mvc:view-controller path="/xxx/xxx.html" view-name="target"/>-->
+    <!--    <mvc:view-controller path="/xxx/xxx.html" view-name="target"/>-->
 
     <!-- 配置基于 XML 的异常映射 -->
     <bean id="simpleMappingExceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
